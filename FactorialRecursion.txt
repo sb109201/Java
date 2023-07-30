@@ -1,0 +1,26 @@
+??common line argument
+public class FactorialRecursion {
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Usage: java FactorialRecursion <number>");
+            return;
+        }
+
+        int num = Integer.parseInt(args[0]);
+        if (num < 0) {
+            System.out.println("Factorial is not defined for negative numbers.");
+            return;
+        }
+
+        long result = calculateFactorial(num);
+        System.out.println("Factorial of " + num + " is: " + result);
+    }
+
+    private static long calculateFactorial(int num) {
+        if (num == 0 || num == 1) {
+            return 1;
+        } else {
+            return num * calculateFactorial(num - 1);
+        }
+    }
+}

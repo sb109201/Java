@@ -1,0 +1,19 @@
+public class SimpleInterest {
+    public static void main(String[] args) {
+        if (args.length != 3) {
+            System.out.println("Usage: java SimpleInterest <principal> <rate> <time>");
+            return;
+        }
+
+        double principal = Double.parseDouble(args[0]);
+        double rate = Double.parseDouble(args[1]);
+        double time = Double.parseDouble(args[2]);
+
+        double simpleInterest = calculateSimpleInterest(principal, rate, time);
+        System.out.println("Simple Interest: " + simpleInterest);
+    }
+
+    private static double calculateSimpleInterest(double principal, double rate, double time) {
+        return (principal * rate * time) / 100.0;
+    }
+}

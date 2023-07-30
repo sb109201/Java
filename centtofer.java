@@ -1,8 +1,10 @@
-import java.util.*;
+import java.io.*;
 public class centtofer{
 public static void main(String args[]){
-double tf=33,tc;
-tc=(5*(tf-32))/9;
+ Console c =System.console();
+ System.out.println("Enter temparature in Ferhenheit");
+ double f=Double.parseDouble(c.readLine());
+ double tc=(5*(f-32))/9;
 System.out.println("Temparature in centrigrade"+ tc);
 }
 }

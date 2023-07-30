@@ -1,0 +1,22 @@
+//Command line argument & recursion
+
+class Fibonacci{
+    static int Fib(int n){
+        if(n==0)
+         return 0;
+        else if(n==1)
+         return 1;
+        else
+         return Fib(n-1)+Fib(n-2);
+    }
+    public static void main(String args[]){
+        int n=Integer.parseInt(args[0]);
+        System.out.println("Fibonacci upto"+n+":");
+        for(int i=1;i<=n;i++){
+            int f=Fib(i);
+            System.out.println(f+" ");
+        }
+        System.out.println();
+
+    }
+}
